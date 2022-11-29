@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+  <!-- Назначение: исходная страница игрового web-приложения Transwords (Трансворды) -->
+  <!-- Автор: Igor Nesiolovskiy -->
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>TRANSWORDS game, © Nesiolovskiy Igor, 2022</title>
+  <link rel="stylesheet" type="text/css" href="css/styles.css"> 
+</head>
+<body>
+
+  <canvas id="gameCanvas"></canvas>
+  
+  <!-- определение областей разметки игровой площадки (игрового экрана) -->
+  <script type="text/javascript" src = "js/playground.js"></script>
+
+  <!-- определение структуры игрового поля -->
+  <script type="text/javascript" src = "js/gamefield.js"></script>
+
+  <!-- определение карт игрового поля -->
+  <script type="text/javascript" src = "js/gamemaps.js"></script>
+
+  <!-- выполнение разметки игрового поля -->
+  <script type="text/javascript" src = "js/gamemarkup.js"></script>
+
+  <!-- определение набора данных для игры с русскими словами -->
+  <script type="text/javascript" src = "js/wordsru.js"></script>
+
+  <!-- определение набора данных для игры с английскими словами -->
+  <script type="text/javascript" src = "js/wordsen.js"></script>
+
+  <!-- выполнение раскладки слов на игровом поле -->
+  <script type="text/javascript" src = "js/wordlayout.js"></script>
+
+  <!-- выполнение отрисовки игрового экрана -->
+  <script type="text/javascript" src = "js/gamescreen.js"></script>
+
+  <!-- набор различных общих сервисных функций приложения -->
+  <script type="text/javascript" src = "js/servicefunc.js"></script>
+
+  <!-- выполнение отрисовки кнопок меню -->
+  <script type="text/javascript" src = "js/menubuttons.js"></script>
+
+  <!-- выполнение подготовки текстовых сообщений -->
+  <script type="text/javascript" src = "js/gamenotes.js"></script> 
+
+  <!-- выполнение вывода текстовых сообщений -->
+  <script type="text/javascript" src = "js/texthandler.js"></script>
+
+  <!-- выполнение подсчета игрового времени -->
+  <script type="text/javascript" src = "js/gameclock.js"></script>
+
+  <!-- выполнение обработки данных в локальном хранилище браузера -->
+  <script type="text/javascript" src = "js/gamemory.js"></script>
+
+  <!-- прикладные функции главного модуля приложения -->
+  <script type="text/javascript" src = "js/mainfunc.js"></script>
+
+  <!-- выполнение главного управляющего модуля приложения -->
+  <script type="text/javascript" src = "js/main.js"></script>
+
+  <!-- подключение библиотеки VK Bridge игровой платформы ВКонтакте -->
+  <script src="https://unpkg.com/@vkontakte/vk-bridge/dist/browser.min.js"></script>
+  <!-- передача сообщения о запуске приложения и инициализации необходимых параметров -->
+  <script> 
+    vkBridge.send("VKWebAppInit", {});
+  </script>
+
+</body>
+</html>

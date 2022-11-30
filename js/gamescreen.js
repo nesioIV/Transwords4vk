@@ -95,13 +95,13 @@ function getGameColor(colorID, themeID) {
     "menu_font_color":
     {
       "DARK": `Tomato`,
-      "LIGHT": `White`
+      "LIGHT": `MediumSlateBlue`
     },
 
     "menu_line_color":
     {
       "DARK": `Tomato`,
-      "LIGHT": `White`
+      "LIGHT": `MediumSlateBlue`
     },
 
     //**************************************************

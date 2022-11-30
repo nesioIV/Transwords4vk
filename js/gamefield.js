@@ -127,7 +127,7 @@ class GameField {
             //(this.cellSide - this.cellSide * this.drawStyle.charFontScale) / 4 + 
             // this.cellSide * j, this.cellSide);            
               (this.cellSide - this.cellSide * this.drawStyle.charFontScale) * 0 + this.cellSide * j -
-               this.cellSide * (1 - this.drawStyle.charFontScale) * ( 1 / 4), this.cellSide);
+               this.cellSide * (1 - this.drawStyle.charFontScale) * ( 1 / 4 ), this.cellSide);
         }
       });
     });
@@ -154,7 +154,7 @@ class GameField {
             "px " + this.drawStyle.charFontName;
           ctx.fillStyle = this.drawStyle.charFontColorStencil;
           // уточнить стиль и цвет шрифта для центральной ячейки с символом "меню"
-          if (PAUSE_BUTTON_ROW == j && PAUSE_BUTTON_COL == i) { 
+          if (PAUSE_BUTTON_ROW == j && PAUSE_BUTTON_COL == i) {
             ctx.font = menuButtons.drawStyle.btnFontStyle + " " + this.cellSide * this.drawStyle.charFontScale + 
             "px " + menuButtons.drawStyle.btnFontName;
             ctx.fillStyle = menuButtons.drawStyle.btnFontColor;
@@ -162,12 +162,12 @@ class GameField {
           ctx.textAlign = this.drawStyle.charTextAlign;
           ctx.baseLine = this.drawStyle.charBaseline;
           ctx.fillText(value,  
-            playground.gameStencilArea.xUpLeft + this.cellSide / 2  + this.cellSide * i,
+            playground.gameStencilArea.xUpLeft + this.cellSide * ( 1 / 2 )  + this.cellSide * i,
             playground.gameStencilArea.yUpLeft + this.cellSide * this.drawStyle.charFontScale + 
               //(this.cellSide - this.cellSide * this.drawStyle.charFontScale) / 4 + 
               //this.cellSide * j, this.cellSide);
               (this.cellSide - this.cellSide * this.drawStyle.charFontScale) * 0 + this.cellSide * j -
-               this.cellSide * (1 - this.drawStyle.charFontScale) * ( 1 / 3), this.cellSide);
+               this.cellSide * (1 - this.drawStyle.charFontScale) * ( 1 / 4 ), this.cellSide);
         }
       });
     });

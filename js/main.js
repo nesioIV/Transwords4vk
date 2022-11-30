@@ -119,7 +119,7 @@ pushTextToBuf("act_display_menufunc", gameSettings.lang, PLAYGROUNDAREAS.outputM
 pushTextToBuf("evnt_display_statistics", gameSettings.lang, PLAYGROUNDAREAS.gameScoreboard);  // данные статистики
 
 // подстроить вид меню
-gameSettings.sound == "ON" ? BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  "🕪" : BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  "🕨";
+gameSettings.sound == "ON" ? BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  " ♫ " : BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  " ♪ ";
 
 // отобразить игровой экран
 drawGameScreen();
@@ -274,13 +274,13 @@ function mainGameCycle(event) {
           switch (gameSettings.sound ) {
             case "OFF":
               gameSettings.sound = "ON";
-              BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  "🕪" // 🕨 - выключен, 🕪 - включен
+              BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  " ♫ " // ♪ - выключен, ♫ - включен
               playSound("buz");  // выдать звук
               break;
             case "ON":
             default:
               gameSettings.sound = "OFF";
-              BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  "🕨"
+              BUTTONS[menuButtons.getButtonIndex("Sound")][1] =  " ♪ "
               break;
           }
           // записать текущие настройки игры в локальное хранилище

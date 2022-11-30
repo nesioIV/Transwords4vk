@@ -9,7 +9,7 @@ class TextHandler {
 
   // определить стиль отрисовки выводимого текста
   drawStyle = {
-    txtFontName:  "Comic Sans MS", // безопасный шрифт символов текста: "Arial", "Verdana", "Georgia", "Impact", "Comic Sans MS", "Times New Roman"
+    txtFontName:  "Arial", // безопасный шрифт символов текста: "Arial", "Verdana", "Georgia", "Impact", "Comic Sans MS", "Times New Roman"
     txtFontStyleMsg : "",  // стиль символов текста в блоке сообщения: "bold" или "" (пусто)
     txtFontStyleSts : "",  // стиль символов текста в блоке игровой статистики: "bold" или "" (пусто)
     txtFontColorMsg : getGameColor("output_message_color", gameSettings.theme),  // цвет символов текста в блоке сообщений

@@ -2,19 +2,19 @@
 // РАЗРАБОТЧИК: Igor Nesiolovskiy
 
 const BUTTONS = [  // массив данных о кнопках управления 
-  ["PlayGame",      "🞂"],
-  ["LevelUpdate",   "⭮"],  
-  ["LevelDown",     " 🠗 "],
-  ["LevelUp",       " 🠕 "],
+  ["PlayGame",      " ► "],  // "🞂"],
+  ["LevelUpdate",   " ↻ "],  // ⭮"],
+  ["LevelDown",     " – "],  // " 🠗 "],
+  ["LevelUp",       " + "],  // 🠕 "],
   //["LevelReset",    " ↯ "],
-  ["Language",      "🗢"],  
-  ["Sound",         "🕪"],  // 🕨 - выключен, 🕪 - включен
-  ["Theme",         "◐"],
-  ["Help",          "?"],
-  ["Quit",     "×"] ];
+  ["Language",      " ∪ "],  
+  ["Sound",         " ♫ "],  // ♪ - выключен, ♫ - включен
+  ["Theme",         " ◑ "],  // "◐"],
+  ["Help",          " ? "],
+  ["Quit",     " × "] ];  // "×"] ];
 
 // метаданные кнопки "пауза"
-const PAUSE_BUTTON = [["GamePause", "⏸"]];  // "☰"
+const PAUSE_BUTTON = [["GamePause", " ◄ "]];  // "☰"
 const PAUSE_BUTTON_ROW = Math.floor(GAME_FIELD_ROWS / 2);  // положение на сетке задания-трафарета:
 const PAUSE_BUTTON_COL = Math.floor(GAME_FIELD_COLS / 2);  // в центральной ячейку сетки задания-трафарета
 
@@ -27,7 +27,7 @@ class MenuButtons {
   drawStyle = {
     btnLineColor: getGameColor("menu_line_color", gameSettings.theme),  // цвет границы вокруг кнопки
     btnLineWidth: 2,  // толщина границы вокруг кнопки
-    btnFontName:  "Verdana", // безопасный шрифт символов: "Arial", "Verdana", "Georgia", "Impact", "Comic Sans MS", "Times New Roman"
+    btnFontName:  "Verdana", // безопасный шрифт символов: "Verdana", "Arial", "Georgia", "Impact", "Comic Sans MS", "Times New Roman"
     btnFontStyle : "bold",  // стиль символов на кнопке: "bold" или "" (пусто) 
     btnFontColor : getGameColor("menu_font_color", gameSettings.theme),  // цвет символов на кнопке: "Chocolate"
     btnTextAlign : "center",  // параметр выравнивания символов на кнопке по горизонтали

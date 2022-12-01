@@ -135,9 +135,11 @@ class GameField {
   // отображение сетки с заданием-трафаретом на игру для пользователя 
   drawGridCellsStencil() {
     //this.initCellSize();  // уточнить размер ячейки игрового поля для случая ресайзинга окна браузера
+    let pix_shft;  // пиксельная поправка
     this.cellArrStencil.forEach((row, j) => {
       row.forEach((value, i) => {
         if (value != DUMMY_CHAR) {
+          pix_shft = 5;
           // отобразить границы ячейки
           ctx.strokeStyle = this.drawStyle.cellLineColor;
           ctx.lineWidth = this.drawStyle.cellLineWidth;
@@ -158,11 +160,12 @@ class GameField {
             ctx.font = menuButtons.drawStyle.btnFontStyle + " " + this.cellSide * this.drawStyle.charFontScale + 
             "px " + menuButtons.drawStyle.btnFontName;
             ctx.fillStyle = menuButtons.drawStyle.btnFontColor;
+            pix_shft = 45 / 10;  // пиксельная поправка для иконки
           }
           ctx.textAlign = this.drawStyle.charTextAlign;
           ctx.baseLine = this.drawStyle.charBaseline;
           ctx.fillText(value,  
-            playground.gameStencilArea.xUpLeft + this.cellSide * ( 1 / 2 )  + this.cellSide * i,
+            playground.gameStencilArea.xUpLeft + this.cellSide * ( pix_shft / 10 )  + this.cellSide * i,
             playground.gameStencilArea.yUpLeft + this.cellSide * this.drawStyle.charFontScale + 
               //(this.cellSide - this.cellSide * this.drawStyle.charFontScale) / 4 + 
               //this.cellSide * j, this.cellSide);

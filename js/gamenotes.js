@@ -35,29 +35,29 @@ The description of the screen buttons is displayed by the button [${menuButtons.
 {
 "RU":
 `                  ЭКРАННЫЕ КНОПКИ:
-[${menuButtons.getButtonSymb("PlayGame")}] — запустить или продолжить игру
-[${menuButtons.getButtonSymb("GamePause")}] — сделать паузу в игре
-[${menuButtons.getButtonSymb("LevelUpdate")}] — обновить уровень игры
-[${menuButtons.getButtonSymb("LevelDown")}] — понизить уровень игры
-[${menuButtons.getButtonSymb("LevelUp")}] — повысить уровень игры
-[${menuButtons.getButtonSymb("Language")}] — изменить настройку языка 
-[${menuButtons.getButtonSymb("Sound")}] — изменить настройку звука
-[${menuButtons.getButtonSymb("Theme")}] — изменить экранную тему
-[${menuButtons.getButtonSymb("Help")}] — показать правила игры
-[${menuButtons.getButtonSymb("Quit")}] — завершить работу приложения`
+${menuButtons.getButtonSymb("PlayGame")} запустить или продолжить игру
+${menuButtons.getButtonSymb("GamePause")} сделать паузу в игре
+${menuButtons.getButtonSymb("LevelUpdate")}  обновить уровень игры
+${menuButtons.getButtonSymb("LevelDown")}   понизить уровень игры
+${menuButtons.getButtonSymb("LevelUp")}   повысить уровень игры
+${menuButtons.getButtonSymb("Language")}  изменить настройку языка 
+${menuButtons.getButtonSymb("Sound")}  изменить настройку звука
+${menuButtons.getButtonSymb("Theme")}  изменить экранную тему
+${menuButtons.getButtonSymb("Help")}   показать правила игры
+${menuButtons.getButtonSymb("Quit")}   завершить работу приложения`
 ,
 "EN": 
 `                     SCREEN BUTTONS:
-[${menuButtons.getButtonSymb("PlayGame")}] — start or resume the game
-[${menuButtons.getButtonSymb("GamePause")}] — pause the game
-[${menuButtons.getButtonSymb("LevelUpdate")}] — update game level
-[${menuButtons.getButtonSymb("LevelDown")}] — level down the game
-[${menuButtons.getButtonSymb("LevelUp")}] — level up the game
-[${menuButtons.getButtonSymb("Language")}] — change language setting 
-[${menuButtons.getButtonSymb("Sound")}] — change sound setting
-[${menuButtons.getButtonSymb("Theme")}] — change screen theme
-[${menuButtons.getButtonSymb("Help")}] — show game rules
-[${menuButtons.getButtonSymb("Quit")}] — shut down the application`
+${menuButtons.getButtonSymb("PlayGame")} start or resume the game
+${menuButtons.getButtonSymb("GamePause")} pause the game
+${menuButtons.getButtonSymb("LevelUpdate")}  update game level
+${menuButtons.getButtonSymb("LevelDown")}   level down the game
+${menuButtons.getButtonSymb("LevelUp")}   level up the game
+${menuButtons.getButtonSymb("Language")}  change language setting 
+${menuButtons.getButtonSymb("Sound")}  change sound setting
+${menuButtons.getButtonSymb("Theme")}  change screen theme
+${menuButtons.getButtonSymb("Help")}   show game rules
+${menuButtons.getButtonSymb("Quit")}   shut down the application`
 },
 
 //**************************************************
@@ -114,14 +114,13 @@ Best game time...........${gameClock.timeMeasureFormat(gameMemory.recordsTableAr
 "EN":
 `
 
+
                                     ☁
 
 The game is inactive in this session.
 
 
-                                    ☁
-
-`
+                                    ☁`
 },
 
 //**************************************************
@@ -131,24 +130,24 @@ The game is inactive in this session.
 "RU":
  `
 
- ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀
+ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀
          
                ТРАНСВОРД РАЗГАДАН!
 
             ПРИМИТЕ ПОЗДРАВЛЕНИЯ!
 
- ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀`
+ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀`
 ,
 "EN":
 `
 
- ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀
+ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀
         
         THE TRANSWORD'S BEEN SOLVED!
 
                    CONGRATULATIONS!!!
 
- ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀`
+ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀ ☀`
 },
 
 //**************************************************

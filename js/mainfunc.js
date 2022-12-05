@@ -16,7 +16,6 @@ function getActiveSquareSide(x, y) // координаты клика польз
   // определить ячейку игрового поля, которую кликнул пользователь
   cellRow = Math.floor((y - gameField.yUpLeft) / gameField.cellSide);
   cellCol = Math.floor((x - gameField.xUpLeft) / gameField.cellSide);
-  //console.log(cellRow, cellCol);
   // проверить, что кликнутая ячейка непустая
   if (gameField.cellArr[cellRow][cellCol] != DUMMY_CHAR) {
     playSound("click");  // выдать звук 
@@ -97,8 +96,6 @@ function isSquareSideCellActive(row, col) {
 function doTranswording(fstSideIndex, sndSideIndex, cellRow, cellCol) {
   let fstActiveSideCellsArr = [];  // массив координат ячеек первой активной стороны квадрата
   let sndActiveSideCellsArr = [];  // массив координат ячеек второй активной стороны квадрата
-
-  //console.log("log:");
 
   // нормализовать представление ячеек первой стороны, 
   // т.е. представить их в порядке, чтобы ячейка пересечения
@@ -191,9 +188,8 @@ function getStencilPauseCell(x, y) // координаты клика польз
   // определить ячейку задания-трафарета, которую кликнул пользователь
   cellRow = Math.floor((y - playground.gameStencilArea.yUpLeft) / gameField.cellSide);
   cellCol = Math.floor((x - playground.gameStencilArea.xUpLeft) / gameField.cellSide);
-  //console.log(cellRow, cellCol);
   // проверить, что кликнутая ячейка содержит символ "пауза"
-  // PAUSE_BUTTON = [["GamePause", "⏸"]]
+  // PAUSE_BUTTON = [["GamePause", " ◄ "]]
   if (gameField.cellArrStencil[cellRow][cellCol] == PAUSE_BUTTON[0][1]) {
     buttomName = PAUSE_BUTTON[0][0];  // наименование кнопки
   }
@@ -202,7 +198,7 @@ function getStencilPauseCell(x, y) // координаты клика польз
 
 // выполнение случайной перемешки слов в качестве задания пользователю на игру
 function doWordMixing() {
-  let repeater = 99999 //97531  // повторитель операции трансводинга для каждой пары смежных строн
+  let repeater = 99999  // повторитель операции трансводинга для каждой пары смежных строн
   let lenghtArr = squareSideIntersectionArr.length  // длина массива пар смежных сторон
   let randomIndex  // случайный индекс элемента в массива
   let i  // счетчик цикла
@@ -211,10 +207,8 @@ function doWordMixing() {
     // выбрать случайную пару смежных слов
     randomIndex = getRandomInt(0, lenghtArr - 1); 
     gameField.activeSquareSide = {  
-
       // функция gameMarkup.findSquareSideIndex(squareSideKey, squareSideArr)
       // выполняет поиск индекса в squareSideArr по ключу стороны squareSideKey
-
       first: gameMarkup.findSquareSideIndex(squareSideIntersectionArr[randomIndex][0],
         squareSideArr) ,// значение индекса первой стороны в SquareSideArr 
       second: gameMarkup.findSquareSideIndex(squareSideIntersectionArr[randomIndex][1],  

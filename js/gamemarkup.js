@@ -7,7 +7,7 @@ const GAME_FIELD_SQUARE_SIZE = 5;  // размер стороны квадрат
 let squareArr = [];  // массив квадратов игрового поля (с ключами сторон)
 let squareSideArr = [];  // массив сторон квадратов игрового поля (с координатами ячеек стороны и её ключом)
 let squareSideIntersectionArr = []; // массив пересечений смежных парных сторон квадратов 
-                                    //(с ключами сторон и координатами ячейки переcечения сторон)
+                                    // (с ключами сторон и координатами ячейки переcечения сторон)
 
 class GameMarkup {
 
@@ -57,9 +57,6 @@ class GameMarkup {
     // определение ячеек у каждой из 4-х сторон квадрата игрового поля 
     // по координатам углов квадрата (сторона состоит из 5-ти смежных ячеек поля)
    
-    // let squareSideKey = this.getSquareSideKey (  // ключ первой (верхней) стороны квадрата
-    //   squareLUC[0] + 0, squareLUC[1] + 0,  // первая ячейка верхней стороны квадрата 
-    //   squareLUC[0] + 0, squareLUC[1] + 4 );  // последняя ячейка верхней стороны квадрата
     let squareSideKey = squareArr[squareArr.length - 1][0]; // ключ первой (верхней) стороны квадрата
 
     // проверить по ключу, зафиксирована ли сторона квадрата в массиве сторон квадратов,
@@ -74,9 +71,6 @@ class GameMarkup {
         squareSideKey ] );  
     };
 
-    // squareSideKey = this.getSquareSideKey (  // ключ второй (левой) стороны квадрата
-    //   squareLUC[0] + 0, squareLUC[1] + 0,  // первая ячейка левой стороны квадрата
-    //   squareLUC[0] + 4, squareLUC[1] + 0 );  // последняя ячейка левой стороны квадрата
     squareSideKey = squareArr[squareArr.length - 1][1] // ключ второй (левой) стороны квадрата      
 
     if (this.findSquareSideIndex(squareSideKey, squareSideArr) < 0) {
@@ -89,9 +83,6 @@ class GameMarkup {
         squareSideKey ] );         
     };
 
-    // squareSideKey = this.getSquareSideKey (  // ключ третьей (правой) стороны квадрата
-    //   squareRUC[0] + 0, squareRUC[1] + 0,  // первая ячейка правой стороны квадрата
-    //   squareRUC[0] + 4, squareRUC[1] + 0 );  // последняя ячейка правой стороны квадрата
     squareSideKey = squareArr[squareArr.length - 1][2] // ключ третьей (левой) стороны квадрата   
 
     if (this.findSquareSideIndex(squareSideKey, squareSideArr) < 0) {
@@ -104,9 +95,6 @@ class GameMarkup {
       squareSideKey ] );          
       };
 
-    // squareSideKey = this.getSquareSideKey (  // ключ четвертой (нижней) стороны квадрата
-    //   squareLLC[0] + 0, squareLLC[1] + 0,  // первая ячейка нижней стороны квадрата
-    //   squareLLC[0] + 0, squareLLC[1] + 4 );  // последняя ячейка нижней стороны квадрата
     squareSideKey = squareArr[squareArr.length - 1][3] // ключ четвертой (нижней) стороны квадрата   
 
     if (this.findSquareSideIndex(squareSideKey, squareSideArr) < 0) {

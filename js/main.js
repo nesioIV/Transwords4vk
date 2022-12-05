@@ -1,4 +1,4 @@
-// НАЗНАЧЕНИЕ: главный модуль управления js-приложением
+// НАЗНАЧЕНИЕ: главный модуль управления web-приложением
 // РАЗРАБОТЧИК: Igor Nesiolovskiy
 
 "use strict";
@@ -133,7 +133,6 @@ function mainGameCycle(event) {
   rect = canvas.getBoundingClientRect();
   x = event.clientX - rect.left;
   y = event.clientY - rect.top;
-  //console.log(playground.getPlaygroundAreaName(x, y));
   switch (playground.getPlaygroundAreaName(x, y)) {
     case PLAYGROUNDAREAS.gameField:  // клик на игровом поле
       if (gameSettings.status == "ON" || gameSettings.status == "START"  || gameSettings.status == "RESUME") {
@@ -161,7 +160,7 @@ function mainGameCycle(event) {
               // вывести поздравительное сообщение для пользователя
               pushTextToBuf("evnt_display_congratulations", gameSettings.lang, PLAYGROUNDAREAS.outputMessage);  // поздравления
               // актуализировать выводимую информацию об игровой статистике 
-              pushTextToBuf("evnt_display_statistics", gameSettings.lang, PLAYGROUNDAREAS.gameScoreboard);  // поздравления
+              pushTextToBuf("evnt_display_statistics", gameSettings.lang, PLAYGROUNDAREAS.gameScoreboard);  // статистика
               // показать экран
               //drawGameScreen();
               playSound("congr");  // выдать звук
@@ -330,7 +329,7 @@ function mainGameCycle(event) {
     case PLAYGROUNDAREAS.gameStencil:  // клик на игровом задании-трафарете
       if (gameSettings.status == "START" || gameSettings.status == "RESUME") {
         // в случае, если игра выполняется, проверить нажатие кнопки "пауза"
-        // PAUSE_BUTTON = [["GamePause", "⏸"]]
+        // PAUSE_BUTTON = [["GamePause", " ◄ "]]
         if (getStencilPauseCell(x, y) == PAUSE_BUTTON[0][0])  // сверка наименования кнопки
         {
           gameSettings.status = "PAUSE";
@@ -346,7 +345,7 @@ function mainGameCycle(event) {
   // вывести подсказку по экранным кнопкам, если игра активирована или приостановлена или завершена
   if (gameSettings.status == "ON" || gameSettings.status == "PAUSE" || gameSettings.status == "END") 
   { 
-      // отменить статус игры "END" как отработанный
+      // отменить статус игры "END" как исполненный
     textBuffer.isDisplayedMsg == "END" ? "ON" : textBuffer.isDisplayedMsg; 
     if (textBuffer.isDisplayedMsg == "Y")  // удостовериться, что нет еще невыведенного сообщения
     { 

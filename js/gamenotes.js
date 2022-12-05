@@ -2,7 +2,7 @@
 // РАЗРАБОТЧИК: Igor Nesiolovskiy
 
 // функция выдает для показа текстовое сообщение по его ключу и ключу языка игры
-// катеории сообщений:
+// возможные катеории сообщений:
 //  sys (system) - общесистемные сообщения
 //  act (action) - примечания в ответ на действия пользователя
 //  evnt (event) - сообщения, связанные с событиями в игре
@@ -85,15 +85,17 @@ Best game time...........${gameClock.timeMeasureFormat(gameMemory.recordsTableAr
 `
 
  
+☀ Для перехода на следующий уровень игры необходимо пройти текущий уровень игры.
 
-☀ Для перехода на следующий уровень игры необходимо пройти текущий уровень игры.`
+☀ Посетите группу ТРАНСВОРДЫ в социальной сети ВКонтакте и поделитесь с участниками своими успехами в игре!`
 ,
 "EN":
 `
 
 
+☀ Сomplete the current game level to go to the next one.
 
-☀ Сomplete the current game level to go to the next one.`
+☀ Visit the TRANSWORDS group (in Russian letters) on the VKontakte social network and share your success in the game with the participants.`
 },
 
 //**************************************************

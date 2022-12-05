@@ -4,7 +4,7 @@
 // функция отрисовки игрового экрана
 function drawGameScreen() {
   // очистить текущий экран
-  ctx.fillStyle = playground.drawStyle.backColor; // getGameColor("playground_back_color", gameSettings.theme);
+  ctx.fillStyle = playground.drawStyle.backColor;  // getGameColor("playground_back_color", gameSettings.theme);
   ctx.fillRect(playground.playgroundArea.xUpLeft,  // clearRect 
                 playground.playgroundArea.yUpLeft, 
                 playground.playgroundArea.width, 

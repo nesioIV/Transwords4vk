@@ -111,7 +111,7 @@ class Playground {
       this.playgroundArea.width, this.playgroundArea.height);
 
     // нарисовать границы области игрового поля
-    // !!! закомметировать отрисовку !!!
+    // !!! решено закомметировать отрисовку !!!
     //this.drawPlaygroundAreaBorder(this.gameFieldArea.xUpLeft, this.gameFieldArea.yUpLeft, 
     //  this.gameFieldArea.width, this.gameFieldArea.height);
     
@@ -121,7 +121,7 @@ class Playground {
       //case ("PAUSE"):
       //case ("END"):
       //case ("QUIT"):
-      default:  // закомментировать, если "откомментировать" case-ы
+      default:  // закомментировать эту строку, если "откомментировать" case-ы выше
 
         // нарисовать границы области разметки кнопок меню
         this.drawPlaygroundAreaBorder(this.menuButtonsArea.xUpLeft, this.menuButtonsArea.yUpLeft, 
@@ -137,7 +137,7 @@ class Playground {
       case ("START"):
       case ("RESUME"):
         // нарисовать границы области задания-трафарета на игру
-        // !!! закомметировать отрисовку !!!
+        // !!! решено закомметировать отрисовку !!!
         //this.drawPlaygroundAreaBorder(this.gameStencilArea.xUpLeft, this.gameStencilArea.yUpLeft, 
         //  this.gameStencilArea.width, this.gameStencilArea.height);
         break;      

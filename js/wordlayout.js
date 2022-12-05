@@ -1,7 +1,6 @@
 // НАЗНАЧЕНИЕ: выполнение раскладки слов на размеченном игровое поле 
 //   для заданного уровня игры
 // РАЗРАБОТЧИК: Igor Nesiolovskiy
-// МОДИФИКАЦИЯ: 2022-03-27
 
 let gameWords;  // строка для чтения в нее ресурсного файла с набором слов для игры
 let squareWordSideArr = [];  // массив сторон квадратов игрового поля со словами
@@ -78,10 +77,7 @@ class WordLayout {
 
       // проверить корректность получения слов из регулярного выражения
       // и в случае возврата пустого массива завершить процедуру раскладки слов
-      //console.log(wordsArr.length);
       if (wordsArr == null) {
-        // отладка:
-        //console.log(wordsArr.length, relativeIndex, wordsArr[relativeIndex])
         gameField.cellArr.length = 0;  // сбросить данные массива ячеек игрового поля
         gameField.cellArr = gameField.getcellArr();  // проинициализировать ячейки
         return false
@@ -101,8 +97,6 @@ class WordLayout {
       // (т.к. эта выборка из-за устранения дублирования слов может оказаться пустой)
       // и в случае возврата значения null завершить процедуру раскладки слов
       if (wordsArr.length == 0) {
-        // отладка:
-        //console.log(wordsArr.length, relativeIndex, wordsArr[relativeIndex])
         gameField.cellArr.lenght = 0;  // сбросить данные массива ячеек игрового поля
         gameField.cellArr = gameField.getcellArr();  // проинициализировать ячейки
         return false

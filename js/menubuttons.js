@@ -18,7 +18,6 @@ const PAUSE_BUTTON = [["GamePause", " ◄ "]];  // "◄ ☰"
 const PAUSE_BUTTON_ROW = Math.floor(GAME_FIELD_ROWS / 2);  // положение на сетке задания-трафарета:
 const PAUSE_BUTTON_COL = Math.floor(GAME_FIELD_COLS / 2);  // в центральной ячейку сетки задания-трафарета
 
-
 class MenuButtons {
 
   btnAmount = BUTTONS.length;  // количество кнопок игрового меню

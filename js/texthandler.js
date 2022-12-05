@@ -30,7 +30,7 @@ class TextHandler {
   initTxtSize() {
     switch (gameSettings.lang) {
       case "RU":
-        MAX_TEXT_LENGTH = 35;  // кириллица в Comic Sans MS шире латиницы
+        MAX_TEXT_LENGTH = 35;  // кириллица шире латиницы
         break;
       case "EN":
       default:
@@ -89,7 +89,7 @@ class TextHandler {
     ctx.textAlign = this.drawStyle.txtTextAlign;
     ctx.baseLine = this.drawStyle.txtBaseline;
     ctx.font = txtFontStyle + " " + this.drawStyle.txtFontSize + "px " + this.drawStyle.txtFontName;
-    // отобразить текст выводимый текст
+    // отобразить выводимый текст
     let txtParagraph = text.split('\n');  // парсинг текста с разбивкой на абзацы по наличию символа разрыва строки
     let txtLine = "";  // выводимая текстовая строка
     let txtWidth = 0;  // ширина строки как measureText

@@ -123,9 +123,7 @@ class GameField {
           ctx.baseLine = this.drawStyle.charBaseline;
           ctx.fillText(value,  
             this.xUpLeft + this.cellSide / 2  + this.cellSide * i,
-            this.yUpLeft + this.cellSide * this.drawStyle.charFontScale + 
-            //(this.cellSide - this.cellSide * this.drawStyle.charFontScale) / 4 + 
-            // this.cellSide * j, this.cellSide);            
+            this.yUpLeft + this.cellSide * this.drawStyle.charFontScale +             
               (this.cellSide - this.cellSide * this.drawStyle.charFontScale) * 0 + this.cellSide * j -
                this.cellSide * (1 - this.drawStyle.charFontScale) * ( 1 / 4 ), this.cellSide);
         }

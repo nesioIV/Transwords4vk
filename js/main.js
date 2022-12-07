@@ -245,6 +245,7 @@ function mainGameCycle(event) {
           gameSettings.status = "ON";
           // VK Bridge: показать рекламу
           vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
+          vkBridge.then()
             .then((data) => {
               if (data.result)
                 console.log('Реклама показана');

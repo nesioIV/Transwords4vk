@@ -229,7 +229,7 @@ function mainGameCycle(event) {
               if (data.result) {
                 console.log('Реклама показана');
                 // отобразить игровой экран
-                drawGameScreen();
+                //drawGameScreen();
               } else
                 console.log('Ошибка при показе');
             })
@@ -262,7 +262,7 @@ function mainGameCycle(event) {
               if (data.result) {
                 console.log('Реклама показана');
                 // отобразить игровой экран
-                drawGameScreen();
+                //drawGameScreen();
               } else
                 console.log('Ошибка при показе');
             })

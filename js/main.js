@@ -206,15 +206,7 @@ function mainGameCycle(event) {
           break;
         case "LevelDown":
           // VK Bridge: проверить готовность рекламы к показу
-          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
-          // VK Bridge: показать рекламу
-          vkBridge.then((data) => {
-              if (data.result)
-                console.log('Реклама показана');
-              else
-                console.log('Ошибка при показе');
-            })
-            .catch((error) => { console.log(error); /* Ошибка */ });          
+          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' });         
           // выключить игру
           gameSettings.status = "OFF";
           // сбросить время на игровых часах
@@ -231,18 +223,21 @@ function mainGameCycle(event) {
           while (wordLayout.setWordLayout(gameSettings.lang, gameSettings.level) === false) { };
           // включить игру
           gameSettings.status = "ON";
+          // VK Bridge: показать рекламу
+          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
+            .then((data) => {
+              if (data.result) {
+                console.log('Реклама показана');
+                // отобразить игровой экран
+                drawGameScreen();
+              } else
+                console.log('Ошибка при показе');
+            })
+            .catch((error) => { console.log(error); /* Ошибка */ });                  
           break;        
         case "LevelUp":
           // VK Bridge: проверить готовность рекламы к показу
-          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
-          // VK Bridge: показать рекламу
-          vkBridge.then((data) => {
-              if (data.result)
-                console.log('Реклама показана');
-              else
-                console.log('Ошибка при показе');
-            })
-            .catch((error) => { console.log(error); /* Ошибка */ });          
+          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' });
           // выключить игру
           gameSettings.status = "OFF";
           // сбросить время на игровых часах
@@ -261,6 +256,17 @@ function mainGameCycle(event) {
           while (wordLayout.setWordLayout(gameSettings.lang, gameSettings.level) === false) { };
           // включить игру
           gameSettings.status = "ON";
+          // VK Bridge: показать рекламу
+          vkBridge.send('VKWebAppShowNativeAds', { ad_format: 'interstitial' })
+            .then((data) => {
+              if (data.result) {
+                console.log('Реклама показана');
+                // отобразить игровой экран
+                drawGameScreen();
+              } else
+                console.log('Ошибка при показе');
+            })
+            .catch((error) => { console.log(error); /* Ошибка */ });                  
           break;
         case "Language":
           // выключить игру

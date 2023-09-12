@@ -87,7 +87,7 @@ Best game time...........${gameClock.timeMeasureFormat(gameMemory.recordsTableAr
  
 ☀ Для перехода на следующий уровень игры необходимо пройти текущий уровень игры.
 
-☀ Посетите группу ТРАНСВОРДЫ в социальной сети ВКонтакте и поделитесь с участниками своими успехами в игре!`
+☀ Посетите группу ТРАНСВОРДЫ в социальной сети ВКонтакте и узнайте секреты решения головоломки «Трансворды»!`
 ,
 "EN":
 `
@@ -95,7 +95,7 @@ Best game time...........${gameClock.timeMeasureFormat(gameMemory.recordsTableAr
 
 ☀ Сomplete the current game level to go to the next one.
 
-☀ Visit the TRANSWORDS group (in Russian letters) on the VKontakte social network and share your success in the game with the participants.`
+☀ Visit the TRANSWORDS group (in Russian letters) on the VKontakte social network and learn the secrets of solving the puzzle «Transwords»!`
 },
 
 //**************************************************
